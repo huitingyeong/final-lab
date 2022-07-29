@@ -79,13 +79,13 @@ https://bastion.lb39a2.dynamic.opentlc.com:49211/
 ==============================================
 4.2. Build Execution Environment
 
-$ mkdir ee-finallab
+$ mkdir -p $HOME/final-lab/ee-finallab/
 
-$ cd ee-finallab/
+$ cd $HOME/final-lab/ee-finallab/
 
 Execution Environment Image   ee-mitzidotcom:1.0.0
 
-$ cat > execution-environment.yml <<EOF
+$ cat > $HOME/final-lab/ee-finallab/execution-environment.yml <<EOF
 version: 1
 dependencies:
   galaxy: requirements.yml
@@ -95,15 +95,15 @@ EOF
 
 Python Library    openstacksdk==0.36.5
 
-$ cat > requirements.txt <<EOF
+$ cat > $HOME/final-lab/ee-finallab/requirements.txt <<EOF
 openstacksdk==0.36.5
 EOF
 
-$ cat > bindep.txt <<EOF
+$ cat > $HOME/final-lab/ee-finallab/bindep.txt <<EOF
 python3 [platform:rpm]
 EOF
 
-$ cat > $HOME/final-lab/requirements.yml <<EOF
+$ cat > $HOME/final-lab/ee-finallab/requirements.yml <<EOF
 collections:
   - openstack.cloud
   - community.general
