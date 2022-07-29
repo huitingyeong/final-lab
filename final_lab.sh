@@ -1,3 +1,5 @@
+openstack server list -c Name -c Image -c Status -c Networks --os-cloud=${GUID}-project
+
 $ lab destroy -i ac
 
 $ lab deploy -i finallab
@@ -37,8 +39,8 @@ pg_sslmode='prefer'
 # Credentials for container registry to pull execution environment images from,
 # registry_username and registry_password are required for registry.redhat.io
 registry_url='registry.redhat.io'
-registry_username='outsideout1975'
-registry_password='P@sw0rd123456'
+registry_username='xxx'
+registry_password='XXX'
 
 EOF
 
@@ -128,3 +130,9 @@ $ podman tag localhost/ee-mitzidotcom:1.0.0 hub.example.com/ee-mitzidotcom:1.0.0
 $ podman login -u admin -p r3dh4t1! hub.example.com --tls-verify=false
 
 $ podman push --tls-verify=false hub.example.com/ee-mitzidotcom:1.0.0 --remove-signatures
+
+==============================================
+4.3. Provision Infrastructure
+
+$ openstack server list --os-cloud=${GUID}-project
+openstack server list -c Name -c Image -c Status -c Networks --os-cloud=${GUID}-project
