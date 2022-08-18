@@ -18,6 +18,8 @@ $ ansible localhost -m unarchive -a "src=/tmp/ansible-automation-platform-setup-
 
 $ cd ansible-automation-platform-setup-2.1.0-1/
 
+Update with your registry credentials
+
 $ cat > inventory <<EOF
 [automationcontroller]
 ac.example.com
